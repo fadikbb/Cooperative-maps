@@ -10,7 +10,7 @@ function Navbar() {
 
   return (
     <nav
-      className="fixed w-full z-50 bg-[#4d9900] shadow-lg"
+      className="fixed w-full z-50 bg-[#4d9900] shadow-lg container mx-auto"
       style={{ backgroundColor: "#4d9900" }}
     >
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -149,6 +149,19 @@ function Navbar() {
                        rounded-lg"
         >
           Products
+        </Link>
+        <Link
+          to={`/cart`}
+          className="text-white text-lg font-medium 
+                         hover:text-[rgba(248,197,25,255)]
+                         hover:scale-105 
+                         transition-all 
+                         duration-300 
+                         px-3 py-2 
+                         rounded-lg 
+                         hover:bg-green-800/30"
+        >
+          Cart
         </Link>
         <Link
           to={`/about`}
