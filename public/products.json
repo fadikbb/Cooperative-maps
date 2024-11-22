@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Organic Green Apples",
+    "price": "4.99",
+    "category": "Fresh Produce",
+    "imageUrl": "https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?q=80&w=1000"
+  },
+  {
+    "id": 2,
+    "name": "Whole Grain Bread",
+    "price": "3.49",
+    "category": "Bakery",
+    "imageUrl": "https://images.unsplash.com/photo-1598373182133-52452f7691ef?q=80&w=1000"
+  },
+  {
+    "id": 3,
+    "name": "Farm Fresh Eggs",
+    "price": "5.99",
+    "category": "Dairy & Eggs",
+    "imageUrl": "https://images.unsplash.com/photo-1518569656558-1f25e69d93d7?q=80&w=1000"
+  },
+  {
+    "id": 4,
+    "name": "Organic Honey",
+    "price": "8.99",
+    "category": "Natural Sweeteners",
+    "imageUrl": "https://images.unsplash.com/photo-1555211652-5c6222f971bc?q=80&w=1000"
+  },
+  {
+    "id": 5,
+    "name": "Greek Yogurt",
+    "price": "4.49",
+    "category": "Dairy & Eggs",
+    "imageUrl": "https://images.unsplash.com/photo-1571218590952-00d3d13b42f8?q=80&w=1000"
+  },
+  {
+    "id": 6,
+    "name": "Organic Quinoa",
+    "price": "6.99",
+    "category": "Grains",
+    "imageUrl": "https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=1000"
+  },
+  {
+    "id": 7,
+    "name": "Fresh Salmon Fillet",
+    "price": "12.99",
+    "category": "Seafood",
+    "imageUrl": "https://images.unsplash.com/photo-1574781330855-d0db8cc6a79c?q=80&w=1000"
+  },
+  {
+    "id": 8,
+    "name": "Organic Almonds",
+    "price": "7.99",
+    "category": "Nuts & Seeds",
+    "imageUrl": "https://images.unsplash.com/photo-1608797178974-15b35a64ede9?q=80&w=1000"
+  },
+  {
+    "id": 9,
+    "name": "Dark Chocolate Bar",
+    "price": "3.99",
+    "category": "Snacks",
+    "imageUrl": "https://images.unsplash.com/photo-1548907040-4baa42d10919?q=80&w=1000"
+  }
+]
