@@ -76,15 +76,21 @@ function Scanner({ isOpen, onClose }) {
     try {
       const codeReader = codeReaderRef.current;
       if (!codeReader) throw new Error("Code reader not initialized.");
-
+  
+      // List all video input devices (cameras)
       const videoInputDevices = await codeReader.listVideoInputDevices();
-
+  
       if (videoInputDevices.length === 0) {
         throw new Error("No video input devices found.");
       }
-
-      const selectedDeviceId = videoInputDevices[0].deviceId;
-
+  
+      // Find the back camera (typically the second device in the list)
+      const backCamera = videoInputDevices.find((device) => device.label.toLowerCase().includes("back"));
+      
+      // If the back camera is not found, fallback to the first camera
+      const selectedDeviceId = backCamera ? backCamera.deviceId : videoInputDevices[0].deviceId;
+  
+      // Start decoding from the selected device (back camera or fallback)
       codeReader.decodeFromVideoDevice(
         selectedDeviceId,
         "video",
@@ -98,28 +104,28 @@ function Scanner({ isOpen, onClose }) {
           }
         }
       );
+  
       setCameraActive(true);
       setCameraError(null);
       setScanError(null);
+  
     } catch (error) {
       console.error("Camera initialization error:", error);
-
+  
       if (error.name === "NotAllowedError") {
         // Handle camera permission denial
-        setCameraError(
-          "Camera permission denied. Please enable camera access."
-        );
+        setCameraError("Camera permission denied. Please enable camera access.");
       } else if (error.name === "NotFoundError") {
         // Handle no camera found
         setCameraError("No camera found. Please connect a camera.");
       } else {
         setCameraError("Unable to access the camera.");
       }
-
+  
       setCameraActive(false);
     }
   }, []);
-
+  
   // Handle close
   const handleClose = () => {
     if (codeReaderRef.current) {
